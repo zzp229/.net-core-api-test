@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zTYggxyBbgm4iLZXZEW6szA2OGOcUIs0La/VnkqEa/MhivXSlsJqCKuOMh1RZabMkIBH0ay8BHBE5JiG44Hf4g==",
+  "dgSpecHash": "yUwPfjQlai1F8aBZaiO3rNp8MKBQulo5/uKbPvGA69ZhBsqfPdOrgfdO5EUGMNIzvBsVtKmDk1ttuVTtHjPtBA==",
   "success": true,
-  "projectFilePath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Model\\Model.csproj",
+  "projectFilePath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Model\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\13556\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\13556\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

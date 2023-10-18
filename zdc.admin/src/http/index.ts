@@ -5,10 +5,8 @@ import { ElMessage } from 'element-plus'
 
 const instance = axios.create({
     timeout: 3000,
-    headers: {
-        headers:{
-            "Content-Type": "application/json",
-        }
+    headers:{
+        "Content-Type": "application/json",
     }
 })
 
@@ -60,6 +58,6 @@ instance.interceptors.response.use(
 )
 
 export const getToken =(obj: {})=>{
-    return axios.post(`/api/Login/GetToken`, obj)
+    return instance.post(`/api/Login/GetToken`, obj)
 }
 

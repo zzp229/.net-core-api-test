@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7f2ydPQ+VkcFn0Bm68gEt2Jn2mRG9euLmEh+ZjDn00PdcgkNQyDz7qi9g0xsvbe5K1MsWEpY+KpE3JEWBAEqBw==",
+  "dgSpecHash": "444oG3ZI3QM4eB0QfDFqdylGscplWb9JcDOem7ObndH6IA8BFr3qbS0MRulx7dZxaOtX1IiIhbnQrMVlrQXRrw==",
   "success": true,
-  "projectFilePath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Interface\\Interface.csproj",
+  "projectFilePath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Interface\\Interface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\13556\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\13556\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

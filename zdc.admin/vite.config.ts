@@ -14,7 +14,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         // 转发地址
-        target: "http://127.0.0.1:3001/api",
+        target: "http://localhost:5189/api",
         // 启用跨域访问
         changeOrigin: true,
         // 修改请求路径

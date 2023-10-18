@@ -4428,11 +4428,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\WebAPI\\WebAPI.csproj",
+      "projectPath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\13556\\.nuget\\packages\\",
-      "outputPath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\WebAPI\\obj\\",
+      "outputPath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\c\\app\\Visual Studio\\tool\\NuGetPackages"
@@ -4453,14 +4453,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Interface\\Interface.csproj": {
-              "projectPath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Interface\\Interface.csproj"
+            "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Interface\\Interface.csproj": {
+              "projectPath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Interface\\Interface.csproj"
             },
-            "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Model\\Model.csproj": {
-              "projectPath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Model\\Model.csproj"
+            "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Model\\Model.csproj": {
+              "projectPath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Model\\Model.csproj"
             },
-            "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Service\\Service.csproj": {
-              "projectPath": "D:\\desktop\\tmpgit\\vue_api\\zdc.Admin.API\\Service\\Service.csproj"
+            "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Service\\Service.csproj": {
+              "projectPath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Service\\Service.csproj"
             }
           }
         }
