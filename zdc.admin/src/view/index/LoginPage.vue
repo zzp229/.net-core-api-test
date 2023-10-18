@@ -82,6 +82,7 @@ const onSubmit = async (ruleFormRef: FormInstance | undefined) => {
 
             //请求登录接口
             let token:string = await getToken(form) as any as string
+            // console.log(token)
             // 跟新全局状态中的token值
             store().$patch({
                 token: token
