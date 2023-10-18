@@ -46,7 +46,7 @@ import HeaderCom from '../../components/HeaderCom.vue';
 import useStore from '../../store/index';
 import { handleSelect } from '../../tool/index'
 import router from '../../router';
-console.log(`折叠菜单全局状态的值：${useStore().isCollapse}`);
+// console.log(`折叠菜单全局状态的值：${useStore().isCollapse}`);
 
 const list: Array<TreeModel> = [
     {

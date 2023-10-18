@@ -78,3 +78,9 @@ export const tagClick = (index: string) => {
 //         UserMenus: tree
 //     })
 // }
+
+export const SettingUserRouter = async () => {
+    
+    const m = import.meta.glob(['../views/*/*.vue', '../views/*/*/*.vue', '../views/*/*/*/*.vue',])
+    console.log(m)
+}
