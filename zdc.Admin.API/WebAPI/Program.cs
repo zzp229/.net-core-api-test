@@ -143,7 +143,7 @@ if (app.Environment.IsDevelopment())
 }
 
 
-// 开启文件服务
+// 开启文件服务(直接通过路径就可以访问)
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(AppContext.BaseDirectory, "wwwroot")),

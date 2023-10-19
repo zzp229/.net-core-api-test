@@ -77,7 +77,8 @@ const onSubmit = async (ruleFormRef: FormInstance | undefined) => {
             let token: string = await getToken(form) as any as string
             // 更新全局状态中token的值
             store().$patch({
-                token: token
+                token: token,
+                RefreshTokenNum: 0
             })
             ElMessage.success("登录成功！")
             // 路由跳转

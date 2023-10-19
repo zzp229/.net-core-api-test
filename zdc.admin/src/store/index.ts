@@ -12,6 +12,15 @@ const useStore = defineStore('main', {
             RefreshTokenNum:0
         }
     },
+    actions: {
+        reset() {
+            this.token = ""
+            this.isCollapse = false
+            this.tags = []
+            this.UserMenus = []
+            this.RefreshTokenNum = 0
+        }
+    },
     // 状态管理 持久化
     persist: {
         // 开启

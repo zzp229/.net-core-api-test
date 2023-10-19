@@ -68,12 +68,10 @@ export const RecursiveRoutes = (tree: Array<TreeModel>) => {
 export const SettingUserRouter = async () => {
     // 读取所有节点下的文件
     const m = import.meta.glob(['../views/*/*.vue', '../views/*/*/*.vue', '../views/*/*/*/*.vue'])
-    // console.log(m)
     let localArr: any[] = []
     for (var it in m) {
         localArr.push({ filepath: it, component: m[it] })
     }
-    // console.log(localArr)
     const obj = {
         Name: "",
         Index: "",
@@ -87,11 +85,14 @@ export const SettingUserRouter = async () => {
     const list: Array<TreeModel> = RecursiveRoutes(tree)
     list.forEach(p => {
         // 动态添加路由
-        router.addRoute("admin", {
-            name: p.Name,
-            path: p.Index,
-            component: localArr.find(s => s.filepath.indexOf(p.FilePath) > -1).component
-        })
+        let info = localArr.find(s => s.filepath.indexOf(p.FilePath) > -1)
+        if (info) {
+            router.addRoute("admin", {
+                name: p.Name,
+                path: p.Index,
+                component: info.component
+            })
+        }
     })
 
     // 更新全局状态
@@ -100,6 +101,7 @@ export const SettingUserRouter = async () => {
     })
 }
 
+
 // 格式化token
 export const FormatToken = (token: string) => {
     if (token) {
@@ -107,7 +109,6 @@ export const FormatToken = (token: string) => {
     }
     return null
 }
-
 // 格式化时间
 export const FormatDate = (val: number) => {
     //PS：注意这个地方，要乘以1000
@@ -120,7 +121,6 @@ export const FormatDate = (val: number) => {
     const ss = (dt.getSeconds() + '').padStart(2, '0')
     return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
 }
-
 // 获取当前时间
 export const GetDate = () => {
     const dt = new Date()
