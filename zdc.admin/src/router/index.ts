@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { SettingUserRouter } from '../tool/index'
+import { FormatToken, SettingUserRouter, Vaild } from '../tool/index'
 import store from '../store/index'
+import { ElMessage } from 'element-plus'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -68,11 +69,15 @@ router.beforeEach(async (to, from, next) => {
         }
     } else {
         // Todo：判断登录有效期，并且避免重定向次数过多
-
+        let exp = FormatToken(store().token)?.exp as number
+        if (!Vaild(exp) && to.path != "/login") {
+            ElMessage.error("登录已过期，请重新登录！")
+            next("/login")
+        }
     }
 
     // 动态路由已经添加进去了，但是刷新页面后404
-    console.log(router.getRoutes())
+    // console.log(router.getRoutes())
     // 原因是动态添加的路由需要在下次导航时，才生效
     if (to.name == "notfound") {
         // 所以要进行手动跳转到动态添加的路由，但是前提是跳转的path在路由中存在才行

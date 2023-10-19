@@ -14,6 +14,9 @@ dependencies:
   element-plus:
     specifier: ^2.4.0
     version: registry.npmmirror.com/element-plus@2.4.0(vue@3.3.4)
+  jwt-decode:
+    specifier: ^3.1.2
+    version: registry.npmmirror.com/jwt-decode@3.1.2
   pinia:
     specifier: ^2.1.7
     version: registry.npmmirror.com/pinia@2.1.7(typescript@5.2.2)(vue@3.3.4)
@@ -864,6 +867,12 @@ packages:
     name: is-number
     version: 7.0.0
     engines: {node: '>=0.12.0'}
+
+  registry.npmmirror.com/jwt-decode@3.1.2:
+    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jwt-decode/-/jwt-decode-3.1.2.tgz}
+    name: jwt-decode
+    version: 3.1.2
+    dev: false
 
   registry.npmmirror.com/lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
