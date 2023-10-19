@@ -1,13 +1,13 @@
 ﻿using Interface;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.VisualBasic;
 using Model.Dto.User;
 using Model.Other;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +21,11 @@ namespace Service
         {
             _JWTTokenOptions = jwtTokenOptions.CurrentValue;
         }
-
         public async Task<string> GetToken(UserRes user)
         {
             var result = await Task.Run(() =>
             {
+                // 有效载荷，大家可以自己写，爱写多少写多少；尽量避免敏感信息
                 var claims = new[]
 {
                     new Claim("Id",user.Id),
@@ -46,11 +46,11 @@ namespace Service
                  issuer: _JWTTokenOptions.Issuer,
                  audience: _JWTTokenOptions.Audience,
                  claims: claims,
-                 expires: DateTime.Now.AddMinutes(1),//10分钟有效期 
+                 expires: DateTime.Now.AddMinutes(10),//10分钟有效期 
                  notBefore: null,
                  signingCredentials: creds);
 
-                 return new JwtSecurityTokenHandler().WriteToken(token);
+                return new JwtSecurityTokenHandler().WriteToken(token);
             });
             return result;
         }

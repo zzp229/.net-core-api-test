@@ -14,7 +14,6 @@ namespace Service.FileStrategy
     {
         private Strategy _strategy;
         private List<IFormFile> _files;
-        //通过注入的形式实现抽象类
         public FileContext(Strategy strategy, List<IFormFile> files)
         {
             _strategy = strategy;
@@ -22,7 +21,7 @@ namespace Service.FileStrategy
         }
         public async Task<string> ContextInterface()
         {
-            return await _strategy.Upload(_files);  //这是个抽象方法，不知道调用谁的，应该是构造方法传入的那个
+           return await _strategy.Upload(_files);
         }
     }
 }

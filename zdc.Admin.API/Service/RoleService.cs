@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    public class RoleService : IRoleService
+    public  class RoleService: IRoleService
     {
         private readonly IMapper _mapper;
         private ISqlSugarClient _db { get; set; }

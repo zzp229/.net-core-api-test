@@ -1,4 +1,4 @@
-﻿using SqlSugar;
+using SqlSugar;
 namespace Model.Common
 {
     public class IEntity : IBase

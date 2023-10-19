@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 namespace Service.FileStrategy
 {
     /// <summary>
-    /// 工厂类，赋值创建对象
+    /// 工程类，负责创建对象
     /// </summary>
-    public class FileFactory
+    public  class FileFactory
     {
         public static Strategy CreateStrategy(UploadMode mode)
         {
-            switch (mode)
+            switch(mode)
             {
                 case UploadMode.Qiniu:
                     return new QiNiuStrategy();
-                case UploadMode.Local:
+                case UploadMode.Local: 
                     return new LocalStrategy();
 
                 default:

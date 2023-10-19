@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Dto.Login;
 using Model.Dto.User;
-using Model.Entitys;
 using Model.Other;
 using WebAPI.Config;
 
@@ -22,9 +21,8 @@ namespace WebAPI.Controllers
             _userService = userService;
             _jwtService = jwtService;
         }
-
         [HttpPost]
-        public async Task<ApiResult> GetToken([FromBody]LoginReq req)   //FromBody作用：https请求的消息主体反序列化绑定到该参数上
+        public async Task<ApiResult> GetToken([FromBody]LoginReq req)
         {
             if(ModelState.IsValid)
             {
@@ -33,16 +31,14 @@ namespace WebAPI.Controllers
                 {
                     return ResultHelper.Error("账号不存在，用户名或密码错误！");
                 }
-                _logger.LogInformation("登录！");
+                _logger.LogInformation("登录");
                 return ResultHelper.Success(await _jwtService.GetToken(user));
             }
             else
             {
-                return ResultHelper.Error("parms error!");
+                return ResultHelper.Error("parms error ！");
             }
         }
-
-
         /// <summary>
         /// 刷新token
         /// </summary>

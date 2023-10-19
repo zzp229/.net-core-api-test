@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Npgsql.TypeHandlers.NetworkHandlers;
 using Qiniu.Http;
 using Qiniu.Storage;
 using Qiniu.Util;
@@ -14,15 +15,13 @@ namespace Service.FileStrategy
     {
         public override async Task<string> Upload(List<IFormFile> files)
         {
-            var result = Task.Run(() =>
-            {
-                Mac mac = new Mac("nSIMlQQ2xFpkpberyik3zVhkWFe98xNAiISd5Tr1", "z8wQDOEwZ7zse4OntmUmdLGarnwy5-bO4q0eGAHS");
+            var result = Task.Run(() => {
+                Mac mac = new Mac("TGdWJqsl1CrFrk2de8_8dwFs4iZ2kNkrZLs8uirn", "_kvRZICj812D3HzZ_aJAazQAkphEo2cjX9cnkPNU");
                 List<string> res = new List<string>();
                 foreach (var formFile in files)
                 {
                     if (formFile.Length > 0)
                     {
-                        //先载入本地再上传云端
                         var filePath_temp = $"{AppContext.BaseDirectory}/Images_temp";
                         var fileName = $"{DateTime.Now:yyyyMMddHHmmssffff}{formFile.FileName}";
                         if (!Directory.Exists(filePath_temp))
@@ -65,7 +64,7 @@ namespace Service.FileStrategy
                     }
                 }
                 return string.Join(",", res);
-            });
+                });
             return await result;
         }
     }

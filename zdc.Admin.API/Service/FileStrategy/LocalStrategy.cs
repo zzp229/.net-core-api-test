@@ -14,20 +14,19 @@ namespace Service.FileStrategy
     {
         public override async Task<string> Upload(List<IFormFile> files)
         {
-            var res = Task.Run(() =>
-            {
+            var result = Task.Run(() => {
                 List<string> res = new List<string>();
                 foreach (var formFile in files)
                 {
-                    if (formFile.Length > 0)
+                    if(formFile.Length>0)
                     {
                         var filePath = $"{AppContext.BaseDirectory}/wwwroot";
                         var fileName = $"/{DateTime.Now:yyyyMMddHHmmssffff}{formFile.FileName}";
-                        if (!Directory.Exists(filePath))
+                        if(!Directory.Exists(filePath))
                         {
                             Directory.CreateDirectory(filePath);
                         }
-                        using (var stream = File.Create(filePath + fileName))
+                        using (var stream = File.Create(filePath+fileName))
                         {
                             formFile.CopyTo(stream);
                         }
@@ -35,9 +34,9 @@ namespace Service.FileStrategy
                     }
                 }
                 // 将路径数组格式化成逗号分割的字符串
-                return string.Join(",", res); //List集合用逗号分隔开形成string
+                return string.Join(",",res);
             });
-            return await res;
+            return await result;
         }
     }
 }

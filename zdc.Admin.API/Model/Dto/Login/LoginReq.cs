@@ -8,7 +8,7 @@ namespace Model.Dto.Login
         [DefaultValue("admin")]
         public string UserName { get; set; }
         [Required]
-        [DefaultValue("123456")]    //这样就可以设置他的默认值了
+        [DefaultValue("123456")]
         public string PassWord { get; set; }
     }
 }

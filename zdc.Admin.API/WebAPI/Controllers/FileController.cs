@@ -12,17 +12,14 @@ namespace WebAPI.Controllers
     public class FileController : ControllerBase
     {
         private readonly IFileService _fileService;
-        public FileController(IFileService fileService)
-        {
+        public FileController(IFileService fileService) { 
             _fileService = fileService;
         }
 
-
         [HttpPost]
-        public async Task<ApiResult> UploadFile(List<IFormFile> file, UploadMode mode)  //这个只能是file，不能是s
+        public async Task<ApiResult> UploadFile(List<IFormFile>file,UploadMode mode)
         {
             return ResultHelper.Success(await _fileService.Upload(file, mode));
         }
-
     }
 }
