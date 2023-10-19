@@ -3,30 +3,26 @@
         <div class="relative">
             <div class="left">
                 <el-row>
-
                     <el-col :span="24">
                         <div class="homepageLogo">
                             <ul>
                                 <li>
                                     <el-image style="width: 50px; height: 50px" :src="url" fit="fit" />
                                 </li>
-                                <li><span>zdcAdmin</span></li>
+                                <li><span>ZhaoxiAdmin</span></li>
                             </ul>
                         </div>
                     </el-col>
-
-                    <el-row>
-                        <el-col :span="24">
-                            <el-image class="boxbg" :src="boxbg" fit="fit" />
-                            <p class="p1">欢迎使用本系统</p>
-                            <p class="p2">开箱即用的中后台管理系统</p>
-                        </el-col>
-                    </el-row>
-
+                </el-row>
+                <el-row>
+                    <el-col :span="24">
+                        <el-image class="boxbg" :src="boxbg" fit="fit" />
+                        <p class="p1">欢迎使用本系统</p>
+                        <p class="p2">开箱即用的中后台管理系统</p>
+                    </el-col>
                 </el-row>
             </div>
             <div class="right">
-
                 <el-row>
                     <el-col :span="24">
                         <h2>登录</h2>
@@ -50,12 +46,10 @@
                         </el-form>
                     </el-col>
                 </el-row>
-
             </div>
         </div>
     </div>
 </template>
-
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
 import { ElMessage, FormInstance, FormRules } from 'element-plus'
@@ -73,17 +67,15 @@ const rules = reactive<FormRules>({
     userName: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
     passWord: [{ required: true, message: '请输入密码', trigger: 'blur', type: "number" }]
 })
-//定义一个和表单同名的变量
+// 定义一个和表单同名的变量
 const ruleFormRef = ref<FormInstance>()
 const onSubmit = async (ruleFormRef: FormInstance | undefined) => {
     if (!ruleFormRef) return;
     await ruleFormRef.validate(async (valid, fields) => {
         if (valid) {
-
-            //请求登录接口
-            let token:string = await getToken(form) as any as string
-            // console.log(token)
-            // 跟新全局状态中的token值
+            // 请求登录接口
+            let token: string = await getToken(form) as any as string
+            // 更新全局状态中token的值
             store().$patch({
                 token: token
             })
@@ -99,8 +91,6 @@ const onSubmit = async (ruleFormRef: FormInstance | undefined) => {
 }
 </script>
 
-
-// 规定只对当前页面有效
 <style lang="scss" scoped>
 .login {
     width: 100%;

@@ -40,7 +40,6 @@
         </el-col>
     </el-row>
 </template>
-
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import { ElMessage, UploadProps } from 'element-plus'
@@ -77,6 +76,7 @@ const handleAvatarSuccess: UploadProps['onSuccess'] = (
 const onSubmit = () => {
 
 }
+
 </script>
 
 

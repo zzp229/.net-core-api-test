@@ -1,12 +1,11 @@
 <template>
     <el-row>
-        <el-col :span=1>
-            <!-- <IconCom icon="expand"></IconCom> -->
+        <el-col :span="1">
             <el-link :underline="false" @click="ChangeisCollapse">
                 <IconCom icon="expand"></IconCom>
             </el-link>
-        </el-col>
 
+        </el-col>
         <el-col :span="11">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item><a href="/">
@@ -21,7 +20,6 @@
                 </el-breadcrumb-item>
             </el-breadcrumb>
         </el-col>
-
         <el-col :span="12">
             <div class="dropdown">
                 <el-avatar :size="30" :src="circleUrl" />
@@ -42,13 +40,11 @@
             </div>
         </el-col>
     </el-row>
-
-    <!-- 上面的标签 -->
     <el-row>
         <el-col :span="24">
             <el-divider />
             <!-- <el-tag class="mx-1" effect="dark">菜单管理</el-tag>
-            <el-tag class="mx-1" effect="dark">角色管理</el-tag> -->
+            <el-tag class="mx-1" effect="plain">角色管理</el-tag> -->
             <div>
                 <el-tag v-for="item in tags" :key="item.Index" closable class="ml-2"
                     :effect="item.Checked ? 'dark' : 'plain'" @close="handleClose(item.Index)"
@@ -57,17 +53,15 @@
         </el-col>
     </el-row>
 </template>
-
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import IconCom from '../components/IconCom.vue';
 import router from '../router';
 import store from '../store/index';
 import { handleSelect, tagClick } from '../tool';
-import useStore from 'element-plus/es/components/table/src/store';
 const circleUrl = ref('/01.jpeg')
 const NickName = ref("Rise")
-// console.log(`折叠菜单全局状态的值：${useStore().isCollapse}`)
+// console.log(`折叠菜单全局状态的值：${store().isCollapse}`)
 const ChangeisCollapse = () => {
     store().$patch({
         isCollapse: !store().isCollapse
@@ -88,17 +82,16 @@ onMounted(() => {
     }
 })
 
-//从全局状态中读取tags
+// 从全局状态中读取tags
 const tags = ref(store().tags)
-const handleClose = (index: string) => { 
-    // 排除逻辑 点了菜单管理  => 角色管理和用户管理（保留没有点的）
+const handleClose = (index: string) => {
+    // 排除逻辑 点了菜单管理  => 角色管理和用户管理
     tags.value = tags.value.filter(p => p.Index != index)
     store().$patch({
         tags: tags.value
     })
-}
+} 
 </script>
-
 <style lang="scss" scoped>
 .el-header {
     .el-col {

@@ -1,15 +1,13 @@
 import { defineStore } from 'pinia'
 import TagModel from '../class/TagModel';
-
-//全局状态
+import TreeModel from '../class/TreeModel';
 const useStore = defineStore('main', {
     state: () => {
         return {
-            // 如果是false的话就每次加载都是关闭，localStorage则是和上次保持一致
-            // isCollapse: localStorage
             isCollapse: false,
             tags: [] as TagModel[],
-            token:""
+            token: "",
+            UserMenus: [] as TreeModel[]
         }
     },
     // 状态管理 持久化
@@ -28,5 +26,4 @@ const useStore = defineStore('main', {
         ]
     }
 });
-
 export default useStore

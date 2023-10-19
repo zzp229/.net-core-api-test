@@ -2,16 +2,17 @@ import axios from 'axios'
 import store from '../store/index'
 import ApiResult from '../class/ApiResult'
 import { ElMessage } from 'element-plus'
-
+import router from '../router/index'
 const instance = axios.create({
     timeout: 3000,
-    headers:{
+    headers: {
         "Content-Type": "application/json",
+        // 这这里无法使用pinia
+        // "Authorization":"Bearer "+"你的token"
     }
 })
 
-
-//拦截请求
+// 拦截请求
 instance.interceptors.request.use(
     config => {
         // 全局状态管理需要在这里获取，否则会提示没有初始化引用（需要安装什么的）
@@ -19,8 +20,7 @@ instance.interceptors.request.use(
         return config
     }
 )
-
-//拦截响应
+// 拦截响应
 instance.interceptors.response.use(
     response => {
         // 拿到请求结果后统一返回，并设置返回结果
@@ -57,7 +57,11 @@ instance.interceptors.response.use(
     }
 )
 
-export const getToken =(obj: {})=>{
+export const getToken = (obj: {}) => {
     return instance.post(`/api/Login/GetToken`, obj)
 }
 
+// 获取菜单
+export const getTreeMenu = (obj: {}) => {
+    return instance.post(`/api/Menu/GetMenus`, obj)
+}
