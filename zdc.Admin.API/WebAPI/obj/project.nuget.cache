@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MkvmMjm1mPYiKRby1TZLtFXNHQQu2+9XbW9Nknr332E+J5fb3WO4lqSR0BEEMo/0UxjaKCjb6MJ6GHLSOi/bGw==",
+  "dgSpecHash": "l6EP2ope4jgcBGkPjgFa33MX1C1K70rSCzQPlfXdbH2zpdqV1S7PNFqHkDwdgiCqnwcG3JUQi7ziy91/JIqtRw==",
   "success": true,
-  "projectFilePath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "D:\\desktop\\tmpgit\\.net-core-api-test\\zdc.Admin.API\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\13556\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
     "C:\\Users\\13556\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

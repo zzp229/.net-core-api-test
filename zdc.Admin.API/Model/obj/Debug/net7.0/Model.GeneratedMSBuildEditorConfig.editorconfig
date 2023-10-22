@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Model
-build_property.ProjectDir = D:\desktop\tmpgit\vue_api\.net-core-api-test\zdc.Admin.API\Model\
+build_property.ProjectDir = D:\desktop\tmpgit\.net-core-api-test\zdc.Admin.API\Model\

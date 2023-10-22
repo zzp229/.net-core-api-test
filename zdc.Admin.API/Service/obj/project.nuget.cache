@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zEr8m5RfLo+/5ioDr0OI/RfNX6oEJLLTTvCMIJ5pSdiJVBDYQN2NuxhexQd2UreqgVJopgyfoK5+r29WJUYx3w==",
+  "dgSpecHash": "MVsp6P0JkeqPrAlEyBBWpbr2SP2amkatCBjfORDA2d4xz9qg3E8GH3Q1ALzihZE3P4PuKST075h1lp7Fybaxfw==",
   "success": true,
-  "projectFilePath": "D:\\desktop\\tmpgit\\vue_api\\.net-core-api-test\\zdc.Admin.API\\Service\\Service.csproj",
+  "projectFilePath": "D:\\desktop\\tmpgit\\.net-core-api-test\\zdc.Admin.API\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\13556\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\13556\\.nuget\\packages\\jwt\\10.1.1\\jwt.10.1.1.nupkg.sha512",
